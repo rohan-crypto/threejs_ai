@@ -57,8 +57,13 @@ const Customizer = () => {
       try {
         //calling our backend to generate an AI image
         setGeneratingImg(true);//start loading
+        
+        //initially
+        // const response = await fetch('http://localhost:8080/api/v1/dalle', {
 
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        //after deployment
+        const response = await fetch
+        ('https://threejs-ai-nmzc.onrender.com//api/v1/dalle', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
